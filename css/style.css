@@ -1,0 +1,384 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    background-color: #dddddd;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    padding-right: 2rem;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.name {
+    font-size: 2rem;
+}
+
+.name:hover {
+    cursor: default;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding-top: 2.5vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+/* .section-container {
+    display: flex;
+} */
+
+/* ICONS */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+  }
+  
+  .btn-color-1,
+  .btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+  }
+  
+  .btn-color-1:hover,
+  .btn-color-2:hover {
+    cursor: pointer;
+  }
+  
+  .btn-color-1,
+  .btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+  }
+  
+  .btn-color-1:hover {
+    background: rgb(0, 0, 0);
+  }
+  
+  .btn-color-2 {
+    background: none;
+  }
+  
+  .btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+  }
+  
+  .btn-container {
+    gap: 1rem;
+  }
+  
+/* PROFILE SECTION */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+    padding: 0 6rem;
+}
+
+.profile-pic {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+}
+
+.profile-text {
+    align-self: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.profile-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    position: relative;
+    height: 60vh;
+}
+
+.about-text {
+    text-align: justify; /* Right-align the text */
+    font-size: 1.1rem; /* Set font size */
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.6; /* Set line height for better readability */
+}
+
+
+/* PROJECTS SECTION */
+
+/* Grid layout */
+#projects {
+    height: auto;
+    padding-bottom: 5rem;
+}
+
+.project-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+    grid-gap: 20px; /* Adjust as needed */
+    justify-content: space-around; /* Adjust as needed */
+}
+
+.details-container {
+    width: 100%; /* Adjust as needed */
+}
+
+.details-container {
+    padding: 1.5rem 0;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 20rem; /* Adjust as needed */
+    height: 20rem; /* Adjust as needed */
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 4rem;
+  }
+  
+  .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+  
+  .contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+  }
+  
+  .contact-info-container p {
+    font-size: larger;
+  }
+  
+  .contact-icon {
+    cursor: default;
+  }
+  
+  .email-icon {
+    height: 2.5rem;
+  }
+
+
+/* FOOTER SECTION */
+
+footer {
+    height: 4rem;
+    /* margin: 0 1rem; */
+  }
+  
+  footer p {
+    text-align: center;
+  }
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    overflow: hidden; /* Changed to hidden to remove scrollbar from the entire modal */
+}
+
+.modal-content {
+    border-radius: 2rem;
+    background-color: #fefefe;
+    margin: 5% auto;
+    border: 1px solid #888;
+    width: 45%;
+    display: flex; /* Changed to flex for better control of the layout */
+    flex-direction: column; /* Stack children vertically */
+    max-height: 80vh; /* Max height to constrain the modal content */
+    overflow: hidden; /* Prevent scrolling on the modal-content itself */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content > div {
+    padding: 20px;
+}
+
+.modal-title,
+.modal-detail {
+    background-color: #f0f0f0;
+    position: sticky; /* Makes the elements stick at top and bottom */
+    top: 0; /* Stick to the top for modal-title */
+    z-index: 2; /* Ensure it sticks above the scrolled content */
+}
+
+.modal-title {
+    border-radius: 2rem 2rem 0 0;
+}
+
+.modal-detail {
+    border-radius: 0 0 2rem 2rem;
+    position: sticky; /* Makes the element stick at the bottom */
+    bottom: 0; /* Stick to the bottom */
+    z-index: 2; /* Ensure it sticks above the scrolled content */
+}
+
+.modal-text {
+    overflow-y: auto; /* Scrollbar as needed for text content */
+    flex-grow: 1; /* Allows the text block to expand to fill space */
+}
+
+.modal-text ul {
+    padding: 10px;
+}
+
+.modal-text img {
+    width: 90%;
+    padding: 10px;
+}

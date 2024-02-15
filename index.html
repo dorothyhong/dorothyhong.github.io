@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="name">Dorothy Hong</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="profile-pic">
+            <img src="./images/profile-pic.png" alt="Dorothy Hong profile picture">
+        </div>
+        <div class="profile-text">
+
+            <h1 class="title">Hello, I'm Dorothy.</h1>
+            <p>
+                I'm a junior at the University of Michigan seeking 2024 Summer Internship opportunities.
+                I major in Computer Science and minor in User Experience Design.
+            </p>
+
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./images/Resume.pdf')">
+                    Resume
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+
+            <div id="socials-container">
+                <img src="./images/linkedin.png" alt="My LinkedIn profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/dorothy-hong/'" />
+                <img src="./images/github.png" alt="My Github profile" class="icon"
+                    onclick="location.href='https://github.com/dorothyhong'" />
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="about">
+        <h1 class="title">About Me</h1>
+        <div class="about-text">
+            <div class="subtitle">
+                <h2>Skills and Interests</h2>
+                <p>
+                    I am passionate about front-end and full-stack development, with a keen interest in expanding my
+                    knowledge in cybersecurity and machine learning. At DOGU CO., LTD, I conducted market analysis and
+                    developed indoor robotics solutions. My project experience
+                    includes creating dynamic websites using React/Flask stacks, along with expertise in AWS,
+                    graphic design, and UX/UI design. </p>
+            </div>
+            <div class="subtitle">
+                <h2>Courses Taken</h2>
+                <p>
+                    Web Systems (EECS 485), Web Design, Development, and Accessibility (SI 339), Foundations of Computer
+                    Science (EECS 376), Introduction to
+                    Computer Organization (EECS 370), Data Structures and Algorithms (EECS 281), Discrete Math (EECS
+                    203), Calculus I and II
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h1 class="title">Projects</h1>
+        <div class="project-containers">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./images/project-1.jpg" alt="E-commerce Website" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">E-commerce Website</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" data-modal="modal1">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./images/project-2.jpg" alt="Instagram Clone" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Instagram Clone</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" data-modal="modal2">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./images/project-3.jpg" alt="DOGU" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">DOGU Internship</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" data-modal="modal3">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./images/project-4.jpg" alt="Blog Website" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Blog Website</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" data-modal="modal4">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./images/project-5.jpg" alt="Stock Simulation" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Stock Simulation</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" data-modal="modal5">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./images/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                <p><a href="mailto:jmhong@umich.edu">jmhong@umich.edu</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                <p><a href="https://www.linkedin.com/in/dorothy-hong/">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">
+                <span class="close">&times;</span>
+                <h2>E-commerce Website</h2>
+            </div>
+            <div class="modal-text">
+                <p>
+                    E-commerce website <strong>Happy Holidays</strong> a platform where users can discover
+                    and purchase unique Christmas gifts.
+                    The website is designed with pages such as "Gifts for Him" and "Gifts for Her," offering a
+                    diverse
+                    range of products to cater to different preferences.
+                </p>
+
+                <img src="./images/e-commerce1.jpg" alt="e-commerce homepage">
+
+                <ul>
+                    <li>
+                        Hamberger Nav Bar: Implemented hamberger navigation bar for mobile/tablet view (used javascript)
+                    </li>
+                </ul>
+                <img src="./images/e-commerce2.jpg" alt="e-commerce homepage">
+
+
+                <ul>
+                    <li>
+                        Clickable Image: used onclick attribute, which executes a JavaScript action
+                        (window.location.href='perfume.html';) when clicked. This action directs the browser to navigate
+                        to the "perfume.html" page, effectively creating a clickable area functioning as a link to
+                        another webpage.
+                    </li>
+                </ul>
+                <img src="./images/e-commerce3.jpg" alt="e-commerce homepage">
+
+                <ul>
+                    <li>
+                        Image Galleries: There's an image gallery for a product with a main image (#MainImg) and smaller
+                        images displayed in a group. JavaScript is used to change the main image when a small image is
+                        clicked.
+
+                    </li>
+                </ul>
+                <img src="./images/e-commerce4.jpg" alt="e-commerce homepage">
+
+                <ul>
+                    <li>
+                        Google Maps Embedded: Integrated a Google Maps iframe that provides an interactive map
+                        displaying a location
+
+                    </li>
+                </ul>
+                <img src="./images/e-commerce5.jpg" alt="e-commerce homepage">
+
+                <ul>
+                    <li>
+                        Embedded a Video: used CSS to make the video play in a loop
+                    </li>
+                </ul>
+                <img src="./images/e-commerce6.jpg" alt="e-commerce homepage">
+
+            </div>
+            <div class="modal-detail">
+                <p>Tags: C++, Runtime efficiency, stock simulator, STL</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">
+                <span class="close">&times;</span>
+                <h2>Instagram Clone</h2>
+            </div>
+            <div class="modal-text">
+                <p>Insta485 is a set of 3 projects completed in UM's EECS 485: Web Systems course, focusing on
+                    full-stack development to create an Instagram-like platform.</p>
+                <img src="./images/project-2.jpg" alt="e-commerce homepage">
+                <p>The projects aimed to replicate the basic user functionalities of an image-sharing site, involving:
+                </p>
+                <ul>
+                    <li>A frontend developed with React, Jinja, HTML, and CSS, and served through Python's Flask
+                        framework.</li>
+                    <li>A backend REST API constructed using Python's Flask and a SQLite database.</li>
+                    <li>Deployment to AWS utilizing services like EC2.</li>
+                </ul>
+                <p>EECS 485 stands out as one of my favorite courses at UM, largely due to projects like these. It
+                    provided me with invaluable experience in collaborative team work on a significant software project.
+                    I was able to enhance my full-stack development skills and fill gaps in my knowledge, including
+                    tasks like writing bash scripts to automate workflows. This class proved to be pivotal in preparing
+                    me for a successful career in Software Engineering.</p>
+            </div>
+            <div class="modal-detail">
+                <p>Tags: JavaScript, Python, React, SQLite, Flask, Jinja, HTML/CSS, REST API</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">
+                <span class="close">&times;</span>
+                <h2>DOGU Internship</h2>
+            </div>
+            <div class="modal-text">
+                <p>
+                    During my Software Engineer Internship at DOGU CO., LTD, I focused on enhancing
+                    indoor robotics capabilities, particularly in overcoming obstacles and maintaining accurate location
+                    awareness. 
+                </p>
+                <img src="./images/dogu3.jpg" alt="dogu intern group">
+                <li>
+                    One of my responsibilities involved conducting a comprehensive market analysis to gain
+                    insights into current trends, challenges, and opportunities for indoor robotics in healthcare
+                    settings. This involved researching healthcare professionals and patients to understand their
+                    specific needs and challenges in utilizing indoor robots for various tasks within healthcare
+                    facilities.
+                </li>
+                <img src="./images/dogu1.jpg" alt="dogu">
+                <li>
+                    I actively contributed to the development of Vector Maps on top of Point Cloud Data (PCD) maps using
+                    Vector Map Builder (Autoware Map Tools). This task required a deep understanding of mapping
+                    technologies and their application in indoor robotic navigation.
+                    <!-- A significant part of my internship involved developing Vector Maps on top of Point Cloud Data (PCD)
+                    maps using Vector Map Builder, which is part of Autoware Map Tools. This allowed for precise mapping
+                    of indoor environments, crucial for effective navigation and obstacle avoidance. I also contributed
+                    to testing advanced sensor technologies such as cameras and sensors, ensuring the robots could
+                    detect potential dangers and respond swiftly. -->
+                </li>
+                <img src="./images/dogu2.jpg" alt="dogu">
+                <li>
+                    I had the chance to test advanced sensor technology, including cameras and sensors, to detect
+                    potential dangers and ensure swift responses in hospital environments. This aspect of my internship
+                    provided valuable hands-on experience in working with cutting-edge technologies crucial for the
+                    development of safe and efficient indoor robotic systems.
+
+                </li>
+            </div>
+            <div class="modal-detail">
+                <p>Tags: C++, Runtime efficiency, stock simulator, STL</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">
+                <span class="close">&times;</span>
+                <h2>Blog Website</h2>
+            </div>
+            <div class="modal-text">
+                <p>
+                    Blog website where we bring together the joys of travel, delectable recipes, and heartwarming
+                    stories of our beloved pets.
+                </p>
+                <img src="./images/blog1.jpg" alt="blog">
+
+                <ul>
+                    <!-- <li>
+                        For accessibility purposes, a "Skip to Content" link has been implemented to aid navigation
+                        directly to the main content. CSS styles, including position: absolute; and left: -9999px;, are
+                        used initially to hide the link off-screen. When focused, it smoothly transitions back into view
+                        using position: static; and left: auto;.
+                    </li>
+                    <li>
+                        Animations: Engaging animations greet visitors as the "travel," "recipes," and "pets" titles
+                        slide in from the left with changing opacity, adding a subtle touch to the user experience.
+                    </li> -->
+                    <li>
+                        Responsive Design: Our website employs different grid layouts tailored for mobile, tablet, and
+                        desktop views across all pages, ensuring optimal display and functionality on various devices.
+                    </li>
+                    <li>
+                        Photo Gallery: A custom-styled scrollbar for the .photo-gallery element elevates the visual
+                        aesthetics, utilizing -webkit-scrollbar pseudo-elements to achieve a sleek and modern look.
+                    </li>
+                    <img src="./images/blog2.jpg" alt="blog">
+                    <li>
+                        JavaScript Dropdown Menu: Implemented using JavaScript, our dropdown menu enhances usability,
+                        appearing dynamically upon hover, seamlessly integrating with our CSS styles.
+                    </li>
+                    <img src="./images/blog3.jpg" alt="blog">
+                </ul>
+            </div>
+            <div class="modal-detail">
+                <p>Tags: C++, Runtime efficiency, stock simulator, STL</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">
+                <span class="close">&times;</span>
+                <h2>Stock Simulation</h2>
+            </div>
+            <div class="modal-text">
+                <p>The program received as input a list of orders that specified whether the trader intended to buy or
+                    sell
+                    a specific stock. As output, the program would simulate a stock market by printing when a certain
+                    stock
+                    is bought or sold when it is profitable to do so. I also implemented an algorithm to calculate the
+                    ideal
+                    time that a time traveler theoretically could have bought shares of a stock and then later sold that
+                    stock to maximize profit. Completing this project gave me experience using priority queues and the
+                    STL
+                    and it helped me become more proficient with object-oriented design.
+                </p>
+            </div>
+            <div class="modal-detail">
+                <p>Tags: C++, Runtime efficiency, stock simulator, STL</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &#169; 2024 Dorothy Hong</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
