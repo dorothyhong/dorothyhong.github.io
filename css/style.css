@@ -512,14 +512,21 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+
     #contact,
     footer {
-        height: 40vh;
+        height: auto;
     }
-    #profile {
-        height: 83vh;
+    #profile, #about {
+        height: auto;
+        font-size: 10px;
         margin-bottom: 0;
     }
+
+    #projects {
+        height: auto;
+    }
+
     article {
         font-size: 1rem;
     }
