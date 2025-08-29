@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -28,14 +27,14 @@
   <nav id="hamburger-nav">
     <div class="name">Dorothy Hong</div>
     <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
+      <button class="hamburger-icon" aria-label="Open menu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
-      </div>
-      <div class="menu-links">
+      </button>
+      <ul class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
         <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
+      </ul>
     </div>
   </nav>
 
@@ -51,8 +50,8 @@
         Based in Toronto (Richmond Hill, ON), I’m seeking <strong>entry-level software engineering roles</strong> in full-stack, front-end, or data-driven development.
       </p>
       <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./images/Resume.pdf')">Resume</button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+        <button type="button" class="btn btn-color-2" onclick="window.open('./images/Resume.pdf')">Resume</button>
+        <button type="button" class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
       </div>
       <div id="socials-container">
         <img src="./images/linkedin.png" alt="My LinkedIn profile" class="icon"
@@ -102,7 +101,7 @@
         </div>
         <h2 class="experience-sub-title project-title">CSS Data Visualization Internship</h2>
         <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" data-modal="modal4">Read More</button>
+          <button type="button" class="btn btn-color-2 project-btn" data-modal="modal4">Read More</button>
         </div>
       </div>
 
@@ -113,7 +112,7 @@
         </div>
         <h2 class="experience-sub-title project-title">DOGU Internship</h2>
         <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" data-modal="modal3">Read More</button>
+          <button type="button" class="btn btn-color-2 project-btn" data-modal="modal3">Read More</button>
         </div>
       </div>
 
@@ -124,7 +123,7 @@
         </div>
         <h2 class="experience-sub-title project-title">Instagram Clone</h2>
         <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" data-modal="modal2">Read More</button>
+          <button type="button" class="btn btn-color-2 project-btn" data-modal="modal2">Read More</button>
         </div>
       </div>
 
@@ -135,7 +134,7 @@
         </div>
         <h2 class="experience-sub-title project-title">Search Engine</h2>
         <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" data-modal="modal6">Read More</button>
+          <button type="button" class="btn btn-color-2 project-btn" data-modal="modal6">Read More</button>
         </div>
       </div>
 
@@ -146,7 +145,7 @@
         </div>
         <h2 class="experience-sub-title project-title">MapReduce Framework</h2>
         <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" data-modal="modal7">Read More</button>
+          <button type="button" class="btn btn-color-2 project-btn" data-modal="modal7">Read More</button>
         </div>
       </div>
     </div>
@@ -167,19 +166,16 @@
     </div>
   </section>
 
-  <!-- ===== MODALS (match data-modal IDs) ===== -->
-
-  <!-- modal2: Instagram Clone -->
-  <div id="modal2" class="modal">
+  <!-- ===== MODALS ===== -->
+  <!-- Instagram Clone -->
+  <div id="modal2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal2-title">
     <div class="modal-content">
       <div class="modal-title">
-        <span class="close">&times;</span>
-        <h2>Instagram Clone</h2>
+        <button class="close" aria-label="Close">&times;</button>
+        <h2 id="modal2-title">Instagram Clone</h2>
       </div>
       <div class="modal-text">
-        <p>
-          EECS 485 project series building an Instagram-style app with a RESTful backend and dynamic frontend.
-        </p>
+        <p>EECS 485 project series building an Instagram-style app with a RESTful backend and dynamic frontend.</p>
         <img src="./images/project-2.jpg" alt="Instagram clone screenshot">
         <ul>
           <li>Frontend in React + Jinja templating, HTML/CSS.</li>
@@ -194,12 +190,12 @@
     </div>
   </div>
 
-  <!-- modal3: DOGU Internship -->
-  <div id="modal3" class="modal">
+  <!-- DOGU Internship -->
+  <div id="modal3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal3-title">
     <div class="modal-content">
       <div class="modal-title">
-        <span class="close">&times;</span>
-        <h2>DOGU Internship</h2>
+        <button class="close" aria-label="Close">&times;</button>
+        <h2 id="modal3-title">DOGU Internship</h2>
       </div>
       <div class="modal-text">
         <p>Software Engineering Intern working on indoor robotics mapping and validation.</p>
@@ -216,12 +212,12 @@
     </div>
   </div>
 
-  <!-- modal4: CSS Data Visualization Internship -->
-  <div id="modal4" class="modal">
+  <!-- CSS Data Visualization -->
+  <div id="modal4" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal4-title">
     <div class="modal-content">
       <div class="modal-title">
-        <span class="close">&times;</span>
-        <h2>CSS Data Visualization Internship</h2>
+        <button class="close" aria-label="Close">&times;</button>
+        <h2 id="modal4-title">CSS Data Visualization Internship</h2>
       </div>
       <div class="modal-text">
         <p>Center for Sustainable Systems (UM): D3.js data viz for public sustainability factsheets.</p>
@@ -239,12 +235,12 @@
     </div>
   </div>
 
-  <!-- modal6: Search Engine -->
-  <div id="modal6" class="modal">
+  <!-- Search Engine -->
+  <div id="modal6" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal6-title">
     <div class="modal-content">
       <div class="modal-title">
-        <span class="close">&times;</span>
-        <h2>Search Engine</h2>
+        <button class="close" aria-label="Close">&times;</button>
+        <h2 id="modal6-title">Search Engine</h2>
       </div>
       <div class="modal-text">
         <p>Course project implementing a mini Google-style search engine with ranking.</p>
@@ -261,12 +257,12 @@
     </div>
   </div>
 
-  <!-- modal7: MapReduce Framework -->
-  <div id="modal7" class="modal">
+  <!-- MapReduce -->
+  <div id="modal7" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal7-title">
     <div class="modal-content">
       <div class="modal-title">
-        <span class="close">&times;</span>
-        <h2>MapReduce Framework</h2>
+        <button class="close" aria-label="Close">&times;</button>
+        <h2 id="modal7-title">MapReduce Framework</h2>
       </div>
       <div class="modal-text">
         <p>From-scratch MapReduce framework with distributed coordination.</p>
@@ -289,6 +285,7 @@
     <p>Copyright &#169; 2025 Dorothy Hong</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Make sure this path is correct relative to index.html -->
+  <script src="script.js" defer></script>
 </body>
 </html>
