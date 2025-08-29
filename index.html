@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dorothy Hong — Portfolio</title>
-  <meta name="description" content="Dorothy Hong — entry-level software engineer in Toronto focused on full-stack, front-end, and data-driven development." />
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
@@ -14,233 +14,155 @@
 
 <body>
   <!-- NAV -->
-  <header class="site-header">
-    <nav id="desktop-nav" class="nav" aria-label="Primary">
-      <a class="name" href="#profile" aria-label="Go to profile">Dorothy Hong</a>
+  <nav id="desktop-nav">
+    <div class="name">Dorothy Hong</div>
+    <div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Mobile -->
-    <nav id="hamburger-nav" class="nav mobile" aria-label="Primary mobile">
-      <a class="name" href="#profile">Dorothy Hong</a>
-      <div class="hamburger-menu">
-        <button class="hamburger-icon" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </button>
-        <ul id="mobile-menu" class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+  <nav id="hamburger-nav">
+    <div class="name">Dorothy Hong</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="profile-pic">
+      <img src="./images/profile-pic.png" alt="Dorothy Hong profile picture" />
+    </div>
+    <div class="profile-text">
+      <h1 class="title">Hi, I’m Dorothy.</h1>
+      <p>
+        I graduated in May 2025 from the <strong>University of Michigan</strong> with a B.S. in Computer Science and a Minor in UX Design.
+        Based in Toronto (Richmond Hill, ON), I’m seeking <strong>entry-level software engineering roles</strong> in full-stack, front-end, or data-driven development.
+      </p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./images/Resume.pdf')">Resume</button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+      </div>
+      <div id="socials-container">
+        <img src="./images/linkedin.png" alt="My LinkedIn profile" class="icon"
+             onclick="location.href='https://www.linkedin.com/in/dorothy-hong/'" />
+        <img src="./images/github.png" alt="My Github profile" class="icon"
+             onclick="location.href='https://github.com/dorothyhong'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h1 class="title">About Me</h1>
+
+    <div class="about-text">
+      <!-- Technical Skills (comma-separated bullets) -->
+      <div class="subtitle">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> Python, JavaScript, C++, SQL</li>
+          <li><strong>Frameworks &amp; Libraries:</strong> React, Flask, D3.js</li>
+          <li><strong>Databases:</strong> MySQL, MongoDB, SQLite</li>
+          <li><strong>Tools:</strong> Git/GitHub, AWS, Docker, Linux, CI/CD</li>
         </ul>
       </div>
-    </nav>
-  </header>
 
-  <!-- PROFILE / HERO -->
-  <main id="main-content">
-    <section id="profile" class="hero" aria-labelledby="intro-title">
-      <div class="profile-pic">
-        <img src="./images/profile-pic.png" alt="Portrait of Dorothy Hong" loading="eager" />
-      </div>
-
-      <div class="profile-text">
-        <h1 id="intro-title" class="title">Hi, I’m Dorothy.</h1>
-        <p>
-          I graduated in May 2025 from the <strong>University of Michigan</strong> (B.S. in Computer Science; Minor in UX Design).
-          Based in Toronto (Richmond Hill, ON), I’m seeking <strong>entry-level software engineering</strong> roles in full-stack, front-end, or data-driven development.
-        </p>
-
-        <div class="btn-row">
-          <a class="btn btn-color-2" href="./images/Resume.pdf" target="_blank" rel="noopener">Resume</a>
-          <a class="btn btn-color-1" href="#contact">Contact Info</a>
-        </div>
-
-        <ul id="socials-container" class="socials" aria-label="Social links">
-          <li>
-            <a href="https://www.linkedin.com/in/dorothy-hong/" aria-label="LinkedIn">
-              <img src="./images/linkedin.png" class="icon" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/dorothyhong" aria-label="GitHub">
-              <img src="./images/github.png" class="icon" alt="" />
-            </a>
-          </li>
+      <!-- Keep core competencies; no experience highlights -->
+      <div class="subtitle">
+        <h2>Core Competencies</h2>
+        <ul>
+          <li><strong>Full-Stack Web:</strong> React, Flask, REST APIs</li>
+          <li><strong>Front-End &amp; Visualization:</strong> D3.js, accessible UI</li>
+          <li><strong>Distributed Systems:</strong> MapReduce concepts, multithreading</li>
+          <li><strong>Databases:</strong> schema design, complex SQL, NoSQL</li>
+          <li><strong>AI/ML Foundations:</strong> RL basics, search, evaluation</li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section" aria-labelledby="about-title">
-      <h2 id="about-title" class="title">About Me</h2>
-
-      <!-- Value proposition -->
-      <p class="lede">
-        I build user-centered web applications and data products. My strengths are in
-        <strong>full-stack development</strong>, <strong>front-end engineering</strong>, and
-        <strong>data visualization</strong>, with a good foundation in distributed systems.
-      </p>
-
-      <div class="about-grid">
-        <!-- Technical Skills -->
-        <article class="card">
-          <h3>Technical Skills</h3>
-          <div class="skills-grid">
-            <div>
-              <h4>Languages</h4>
-              <ul>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>C++</li>
-                <li>SQL</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Frameworks & Libraries</h4>
-              <ul>
-                <li>React</li>
-                <li>Flask</li>
-                <li>D3.js</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Databases</h4>
-              <ul>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>SQLite</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Tools</h4>
-              <ul>
-                <li>Git/GitHub</li>
-                <li>AWS</li>
-                <li>Docker</li>
-                <li>Linux</li>
-                <li>CI/CD</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Core Competencies -->
-        <article class="card">
-          <h3>Core Competencies</h3>
-          <ul class="bulleted">
-            <li><strong>Full-Stack Web:</strong> React, Flask, REST APIs</li>
-            <li><strong>Front-End & Visualization:</strong> D3.js, accessible UI</li>
-            <li><strong>Distributed Systems:</strong> MapReduce concepts, multithreading</li>
-            <li><strong>Databases:</strong> schema design, complex SQL, NoSQL</li>
-            <li><strong>AI/ML Foundations:</strong> RL basics, search, evaluation</li>
-          </ul>
-        </article>
-
-        <!-- Experience Highlights -->
-        <article class="card">
-          <h3>Experience Highlights</h3>
-          <ul class="bulleted">
-            <li>
-              <strong>Data Visualization Intern — Center for Sustainable Systems (UM)</strong><br />
-              Built <strong>100+ interactive D3.js visuals</strong> for factsheets (~500k annual views);
-              streamlined CSV pipelines to reduce update time by <strong>40%</strong>.
-            </li>
-            <li>
-              <strong>Software Engineer Intern — DOGU (Seoul)</strong><br />
-              Developed indoor robotics mapping with <strong>SLAM, Autoware, LIDAR</strong>;
-              executed 50+ edge-case simulation tests to improve detection accuracy.
-            </li>
-            <li>
-              <strong>Projects</strong> — <em>Search Engine</em> (TF-IDF, PageRank, Flask/React) •
-              <em>MapReduce Framework</em> (Python, distributed coordination, fault tolerance)
-            </li>
-          </ul>
-        </article>
-      </div>
-
-      <p class="note">
-        I’m looking to join a team where I can ship product quickly, learn from code reviews, and
-        contribute across the stack.
-      </p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section" aria-labelledby="projects-title">
-      <h2 id="projects-title" class="title">Projects</h2>
-
-      <div class="project-containers">
-        <!-- Instagram Clone -->
-        <article class="details-container color-container">
-          <div class="article-container">
-            <img src="./images/project-2.jpg" alt="Screenshot of Instagram-style clone project" class="project-img" />
-          </div>
-          <h3 class="project-title">Instagram Clone</h3>
-          <div class="btn-row">
-            <button class="btn btn-color-2 project-btn" data-modal="modal2" aria-haspopup="dialog">Read More</button>
-          </div>
-        </article>
-
-        <!-- DOGU Internship -->
-        <article class="details-container color-container">
-          <div class="article-container">
-            <img src="./images/project-3.jpg" alt="Robotics mapping visuals from DOGU internship" class="project-img" />
-          </div>
-          <h3 class="project-title">DOGU Internship</h3>
-          <div class="btn-row">
-            <button class="btn btn-color-2 project-btn" data-modal="modal3" aria-haspopup="dialog">Read More</button>
-          </div>
-        </article>
-
-        <!-- Search Engine -->
-        <article class="details-container color-container">
-          <div class="article-container">
-            <img src="./images/project-search.jpg" alt="Search engine UI and ranking components" class="project-img" />
-          </div>
-        <h3 class="project-title">Search Engine</h3>
-          <div class="btn-row">
-            <button class="btn btn-color-2 project-btn" data-modal="modal6" aria-haspopup="dialog">Read More</button>
-          </div>
-        </article>
-
-        <!-- MapReduce -->
-        <article class="details-container color-container">
-          <div class="article-container">
-            <img src="./images/project-mapreduce.jpg" alt="MapReduce framework diagram" class="project-img" />
-          </div>
-          <h3 class="project-title">MapReduce Framework</h3>
-          <div class="btn-row">
-            <button class="btn btn-color-2 project-btn" data-modal="modal7" aria-haspopup="dialog">Read More</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <h2 id="contact-title" class="title">Contact</h2>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./images/email.png" alt="" class="icon contact-icon email-icon" aria-hidden="true" />
-          <p><a href="mailto:dorothyyhong@gmail.com">dorothyyhong@gmail.com</a></p>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h1 class="title">Projects</h1>
+    <div class="project-containers">
+      <!-- Instagram Clone -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-2.jpg" alt="Instagram Clone" class="project-img" />
         </div>
-        <div class="contact-info-container">
-          <img src="./images/linkedin.png" alt="" class="icon contact-icon" aria-hidden="true" />
-          <p><a href="https://www.linkedin.com/in/dorothy-hong/">LinkedIn</a></p>
+        <h2 class="experience-sub-title project-title">Instagram Clone</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal2">Read More</button>
         </div>
       </div>
-    </section>
-  </main>
+
+      <!-- DOGU Internship -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-3.jpg" alt="DOGU Internship" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">DOGU Internship</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal3">Read More</button>
+        </div>
+      </div>
+
+      <!-- Search Engine -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-search.jpg" alt="Search Engine" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Search Engine</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal6">Read More</button>
+        </div>
+      </div>
+
+      <!-- MapReduce -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-mapreduce.jpg" alt="MapReduce Framework" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">MapReduce Framework</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal7">Read More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./images/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:dorothyyhong@gmail.com">dorothyyhong@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/dorothy-hong/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>&#169; 2025 Dorothy Hong</p>
+  <footer>
+    <p>Copyright &#169; 2025 Dorothy Hong</p>
   </footer>
 
   <script src="script.js"></script>
-  <noscript>Your browser has JavaScript disabled; the mobile menu and project modals may not function.</noscript>
 </body>
 </html>
