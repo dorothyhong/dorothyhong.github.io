@@ -1,50 +1,43 @@
-// Mobile menu toggle
+// Mobile menu toggle (matches your current CSS which expects .hamburger-menu.open)
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  if (!menu || !icon) return;
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  const wrapper = document.querySelector(".hamburger-menu");
+  if (!wrapper) return;
+  wrapper.classList.toggle("open");
 }
 
-// Modal handlers (attach after DOM is ready)
+// Attach modal handlers when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-  // Open matching modal for each project button
-  document.querySelectorAll(".project-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      const modalId = button.dataset.modal;      // e.g., "modal2"
+  // OPEN
+  document.querySelectorAll(".project-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.dataset.modal;         // e.g., "modal4"
       const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = "block";
-        // focus trap start
-        const closeBtn = modal.querySelector(".close");
-        if (closeBtn) closeBtn.focus();
-      } else {
-        // No matching modal in the DOM — avoid JS errors
-        console.warn(`No modal found with id #${modalId}`);
-      }
+      if (!modal) return console.warn(`No modal found: #${modalId}`);
+      modal.classList.add("open");               // <-- use class, not display
+      const closeBtn = modal.querySelector(".close");
+      if (closeBtn) closeBtn.focus();
     });
   });
 
-  // Close when clicking X
-  document.querySelectorAll(".modal .close").forEach((closeBtn) => {
-    closeBtn.addEventListener("click", () => {
-      const modal = closeBtn.closest(".modal");
-      if (modal) modal.style.display = "none";
+  // CLOSE (click X)
+  document.querySelectorAll(".modal .close").forEach((x) => {
+    x.addEventListener("click", () => {
+      const modal = x.closest(".modal");
+      if (modal) modal.classList.remove("open");
     });
   });
 
-  // Close when clicking outside content
+  // CLOSE (click overlay)
   window.addEventListener("click", (e) => {
     if (e.target.classList && e.target.classList.contains("modal")) {
-      e.target.style.display = "none";
+      e.target.classList.remove("open");
     }
   });
 
-  // Close on ESC
+  // CLOSE (Esc)
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      document.querySelectorAll(".modal").forEach((m) => (m.style.display = "none"));
+      document.querySelectorAll(".modal.open").forEach((m) => m.classList.remove("open"));
     }
   });
 });
