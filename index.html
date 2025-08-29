@@ -68,7 +68,6 @@
     <h1 class="title">About Me</h1>
 
     <div class="about-text">
-      <!-- Technical Skills (comma-separated bullets) -->
       <div class="subtitle">
         <h2>Technical Skills</h2>
         <ul>
@@ -79,7 +78,6 @@
         </ul>
       </div>
 
-      <!-- Keep core competencies; no experience highlights -->
       <div class="subtitle">
         <h2>Core Competencies</h2>
         <ul>
@@ -93,68 +91,66 @@
     </div>
   </section>
 
- <!-- PROJECTS -->
-<section id="projects">
-  <h1 class="title">Projects</h1>
-  <div class="project-containers">
-
-    <!-- CSS Data Visualization Internship -->
-    <div class="details-container color-container">
-      <div class="article-container">
-        <img src="./images/project-css.jpg" alt="CSS Data Visualization Internship" class="project-img" />
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h1 class="title">Projects</h1>
+    <div class="project-containers">
+      <!-- CSS Data Visualization Internship -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-css.jpg" alt="CSS Data Visualization Internship" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">CSS Data Visualization Internship</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal4">Read More</button>
+        </div>
       </div>
-      <h2 class="experience-sub-title project-title">CSS Data Visualization Internship</h2>
-      <div class="btn-container">
-        <button class="btn btn-color-2 project-btn" data-modal="modal4">Read More</button>
+
+      <!-- DOGU Internship -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-3.jpg" alt="DOGU Internship" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">DOGU Internship</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal3">Read More</button>
+        </div>
+      </div>
+
+      <!-- Instagram Clone -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-2.jpg" alt="Instagram Clone" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Instagram Clone</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal2">Read More</button>
+        </div>
+      </div>
+
+      <!-- Search Engine -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-search.jpg" alt="Search Engine" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Search Engine</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal6">Read More</button>
+        </div>
+      </div>
+
+      <!-- MapReduce -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./images/project-mapreduce.jpg" alt="MapReduce Framework" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">MapReduce Framework</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" data-modal="modal7">Read More</button>
+        </div>
       </div>
     </div>
-
-    <!-- DOGU Internship -->
-    <div class="details-container color-container">
-      <div class="article-container">
-        <img src="./images/project-dogu.jpg" alt="DOGU Internship" class="project-img" />
-      </div>
-      <h2 class="experience-sub-title project-title">DOGU Internship</h2>
-      <div class="btn-container">
-        <button class="btn btn-color-2 project-btn" data-modal="modal3">Read More</button>
-      </div>
-    </div>
-    
-    <!-- Instagram Clone -->
-    <div class="details-container color-container">
-      <div class="article-container">
-        <img src="./images/project-insta.jpg" alt="Instagram Clone" class="project-img" />
-      </div>
-      <h2 class="experience-sub-title project-title">Instagram Clone</h2>
-      <div class="btn-container">
-        <button class="btn btn-color-2 project-btn" data-modal="modal2">Read More</button>
-      </div>
-    </div>
-
-    <!-- Search Engine -->
-    <div class="details-container color-container">
-      <div class="article-container">
-        <img src="./images/project-search.jpg" alt="Search Engine" class="project-img" />
-      </div>
-      <h2 class="experience-sub-title project-title">Search Engine</h2>
-      <div class="btn-container">
-        <button class="btn btn-color-2 project-btn" data-modal="modal6">Read More</button>
-      </div>
-    </div>
-
-    <!-- MapReduce -->
-    <div class="details-container color-container">
-      <div class="article-container">
-        <img src="./images/project-map.jpg" alt="MapReduce Framework" class="project-img" />
-      </div>
-      <h2 class="experience-sub-title project-title">MapReduce Framework</h2>
-      <div class="btn-container">
-        <button class="btn btn-color-2 project-btn" data-modal="modal7">Read More</button>
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- CONTACT -->
   <section id="contact">
@@ -170,6 +166,123 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== MODALS (match data-modal IDs) ===== -->
+
+  <!-- modal2: Instagram Clone -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">
+        <span class="close">&times;</span>
+        <h2>Instagram Clone</h2>
+      </div>
+      <div class="modal-text">
+        <p>
+          EECS 485 project series building an Instagram-style app with a RESTful backend and dynamic frontend.
+        </p>
+        <img src="./images/project-2.jpg" alt="Instagram clone screenshot">
+        <ul>
+          <li>Frontend in React + Jinja templating, HTML/CSS.</li>
+          <li>Backend REST API using Flask + SQLite.</li>
+          <li>Implemented auth, posts, likes, comments, and feed updates.</li>
+          <li>Deployed on AWS (EC2) and automated common tasks with bash scripts.</li>
+        </ul>
+      </div>
+      <div class="modal-detail">
+        <p>Tags: React, Flask, Python, SQLite, REST API, AWS</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal3: DOGU Internship -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">
+        <span class="close">&times;</span>
+        <h2>DOGU Internship</h2>
+      </div>
+      <div class="modal-text">
+        <p>Software Engineering Intern working on indoor robotics mapping and validation.</p>
+        <img src="./images/dogu1.jpg" alt="DOGU internship">
+        <ul>
+          <li>Built vector maps on top of PCD maps with Autoware Map Tools.</li>
+          <li>Validated navigation via 50+ edge-case simulations (blocked paths, obstacles).</li>
+          <li>Calibrated sensors (LIDAR/camera) to reduce false negatives.</li>
+        </ul>
+      </div>
+      <div class="modal-detail">
+        <p>Tags: C++, SLAM, LIDAR, Autoware, Robotics</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal4: CSS Data Visualization Internship -->
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">
+        <span class="close">&times;</span>
+        <h2>CSS Data Visualization Internship</h2>
+      </div>
+      <div class="modal-text">
+        <p>Center for Sustainable Systems (UM): D3.js data viz for public sustainability factsheets.</p>
+        <img src="./images/project-css.jpg" alt="CSS D3 visualizations">
+        <ul>
+          <li>Built <strong>100+ interactive D3.js</strong> graphics (energy, mobility, climate).</li>
+          <li>Refactored CSV pipeline; cut update time by <strong>~40%</strong>.</li>
+          <li>Integrated with Drupal site (~<strong>500k</strong> annual views).</li>
+          <li>Focused on accessibility and responsive SVG layouts.</li>
+        </ul>
+      </div>
+      <div class="modal-detail">
+        <p>Tags: D3.js, JavaScript, HTML/CSS, Drupal, Accessibility</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal6: Search Engine -->
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">
+        <span class="close">&times;</span>
+        <h2>Search Engine</h2>
+      </div>
+      <div class="modal-text">
+        <p>Course project implementing a mini Google-style search engine with ranking.</p>
+        <img src="./images/project-search.jpg" alt="Search engine UI">
+        <ul>
+          <li>Built inverted index with MapReduce; computed TF-IDF and PageRank.</li>
+          <li>Flask APIs serving queries; React UI with concurrent requests.</li>
+          <li>Handled pagination, caching, and robust error handling.</li>
+        </ul>
+      </div>
+      <div class="modal-detail">
+        <p>Tags: Python, Flask, React, TF-IDF, PageRank, MapReduce</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal7: MapReduce Framework -->
+  <div id="modal7" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">
+        <span class="close">&times;</span>
+        <h2>MapReduce Framework</h2>
+      </div>
+      <div class="modal-text">
+        <p>From-scratch MapReduce framework with distributed coordination.</p>
+        <img src="./images/project-mapreduce.jpg" alt="MapReduce framework diagram">
+        <ul>
+          <li>Manager/Worker architecture with multithreading & multiprocessing.</li>
+          <li>Fault tolerance (worker retries, heartbeat), and task partitioning.</li>
+          <li>TCP/UDP messaging; deterministic reduce ordering.</li>
+        </ul>
+      </div>
+      <div class="modal-detail">
+        <p>Tags: Python, Concurrency, Networking, Distributed Systems</p>
+      </div>
+    </div>
+  </div>
+  <!-- ===== END MODALS ===== -->
 
   <!-- FOOTER -->
   <footer>
