@@ -1,19 +1,21 @@
-// Mobile menu toggle (matches your current CSS which expects .hamburger-menu.open)
+// Mobile menu toggle
 function toggleMenu() {
   const wrapper = document.querySelector(".hamburger-menu");
-  if (!wrapper) return;
-  wrapper.classList.toggle("open");
+  if (wrapper) wrapper.classList.toggle("open");
 }
 
 // Attach modal handlers when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-  // OPEN
+  // OPEN any modal tied to a .project-btn
   document.querySelectorAll(".project-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const modalId = btn.dataset.modal;         // e.g., "modal4"
+      const modalId = btn.dataset.modal; // e.g., "modal4"
       const modal = document.getElementById(modalId);
-      if (!modal) return console.warn(`No modal found: #${modalId}`);
-      modal.classList.add("open");               // <-- use class, not display
+      if (!modal) {
+        console.warn(`No modal found for #${modalId}`);
+        return;
+      }
+      modal.classList.add("open");
       const closeBtn = modal.querySelector(".close");
       if (closeBtn) closeBtn.focus();
     });
@@ -21,17 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // CLOSE (click X)
   document.querySelectorAll(".modal .close").forEach((x) => {
-    x.addEventListener("click", () => {
+    x.addEventListener("click", (e) => {
       const modal = x.closest(".modal");
       if (modal) modal.classList.remove("open");
+      e.stopPropagation();
     });
   });
 
   // CLOSE (click overlay)
-  window.addEventListener("click", (e) => {
-    if (e.target.classList && e.target.classList.contains("modal")) {
-      e.target.classList.remove("open");
-    }
+  document.querySelectorAll(".modal").forEach((overlay) => {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) overlay.classList.remove("open");
+    });
   });
 
   // CLOSE (Esc)
