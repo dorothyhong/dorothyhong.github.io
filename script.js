@@ -1,29 +1,50 @@
+// Mobile menu toggle
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
+  if (!menu || !icon) return;
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
 
-
-document.querySelectorAll('.project-btn').forEach(function(button) {
-  button.addEventListener('click', function() {
-    var modalId = this.dataset.modal; // Get corresponding modal id
-    document.getElementById(modalId).style.display = 'block'; // Display the matched modal
+// Modal handlers (attach after DOM is ready)
+document.addEventListener("DOMContentLoaded", () => {
+  // Open matching modal for each project button
+  document.querySelectorAll(".project-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const modalId = button.dataset.modal;      // e.g., "modal2"
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "block";
+        // focus trap start
+        const closeBtn = modal.querySelector(".close");
+        if (closeBtn) closeBtn.focus();
+      } else {
+        // No matching modal in the DOM — avoid JS errors
+        console.warn(`No modal found with id #${modalId}`);
+      }
+    });
   });
-});
 
-document.querySelectorAll('.close').forEach(function(closeButton) {
-  closeButton.addEventListener('click', function() {
-    var modal = this.closest('.modal');
-    if (modal) {
-      modal.style.display = 'none';
+  // Close when clicking X
+  document.querySelectorAll(".modal .close").forEach((closeBtn) => {
+    closeBtn.addEventListener("click", () => {
+      const modal = closeBtn.closest(".modal");
+      if (modal) modal.style.display = "none";
+    });
+  });
+
+  // Close when clicking outside content
+  window.addEventListener("click", (e) => {
+    if (e.target.classList && e.target.classList.contains("modal")) {
+      e.target.style.display = "none";
     }
   });
-});
 
-window.addEventListener('click', function(event) {
-  if (event.target.classList.contains('modal')) {
-    event.target.style.display = 'none';
-  }
+  // Close on ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".modal").forEach((m) => (m.style.display = "none"));
+    }
+  });
 });
